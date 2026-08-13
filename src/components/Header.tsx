@@ -1,4 +1,4 @@
-import { Search, Plus, Filter } from 'lucide-react';
+import { Search, Plus } from 'lucide-react';
 import LightningIcon from './LightningIcon';
 
 interface HeaderProps {

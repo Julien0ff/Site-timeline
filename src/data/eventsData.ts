@@ -620,6 +620,34 @@ export const EVENTS: TimelineEvent[] = [
 
   // ── 2025 ──────────────────────────────────────────────
   {
+    id: 'mlp-condamnation-2025',
+    title: 'Condamnation de Marine Le Pen',
+    shortTitle: 'Condamnation MLP',
+    date: '31 mars 2025',
+    dateSort: new Date('2025-03-31').getTime(),
+    year: 2025,
+    month: 3,
+    category: 'judicial',
+    description:
+      "Dans l'affaire des assistants parlementaires, Marine Le Pen est condamnée en première instance à 4 ans de prison (dont 2 ferme) et 5 ans d'inéligibilité avec exécution provisoire.",
+    longDescription:
+      "Le 31 mars 2025, le tribunal correctionnel de Paris a rendu son verdict dans l'affaire des assistants parlementaires européens du Front national (devenu RN). Marine Le Pen a été reconnue coupable de détournement de fonds publics et condamnée en première instance à quatre ans d'emprisonnement (dont deux ferme) ainsi qu'à cinq ans d'inéligibilité assortie de l'exécution provisoire. Cette décision, menaçant directement sa candidature à l'élection présidentielle de 2027, a provoqué un séisme politique en France. En juillet 2026, la Cour d'appel réduira sa peine, lui rendant in extremis son éligibilité.",
+    intensity: 5,
+    status: 'resolved',
+    sources: [
+      { label: 'Le Monde', url: 'https://www.lemonde.fr' },
+      { label: 'France Info', url: 'https://www.francetvinfo.fr' },
+    ],
+    tags: ['Marine Le Pen', 'RN', 'justice', 'inéligibilité', 'présidentielle 2027', 'politique'],
+    keyFacts: [
+      'Condamnation pour détournement de fonds publics le 31 mars 2025',
+      '4 ans de prison (dont 2 ferme) prononcés',
+      "5 ans d'inéligibilité avec exécution provisoire",
+      'Menace directe sur sa candidature à la présidentielle 2027',
+      'Peine finalement réduite en appel en juillet 2026',
+    ],
+  },
+  {
     id: 'gp-explorer-3-2025',
     title: 'GP Explorer 3 « The Last Race »',
     shortTitle: 'GP Explorer 3 (fin)',
