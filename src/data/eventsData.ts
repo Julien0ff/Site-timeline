@@ -703,6 +703,32 @@ export const EVENTS: TimelineEvent[] = [
 
   // ── 2026 ──────────────────────────────────────────────
   {
+    id: 'ciao-energy-2026',
+    title: 'Lancement polémique de Ciao Energy',
+    shortTitle: 'Scandale Ciao Energy',
+    date: '1er juin 2026',
+    dateSort: new Date('2026-06-01').getTime(),
+    year: 2026,
+    month: 6,
+    category: 'corporate',
+    description:
+      "Lancement de la boisson énergisante par Squeezie, Inoxtag et Léna Situations. Accusations de plagiat et critiques sur le marketing 'healthy'.",
+    longDescription:
+      "Le 1er juin 2026, les créateurs Squeezie, Inoxtag et Léna Situations s'associent pour lancer 'Ciao Energy', une nouvelle boisson énergisante. L'initiative tourne très vite au bad buzz : la marque est accusée de plagier l'identité et le concept de la boisson canadienne GURU Organic Energy. Par ailleurs, son positionnement marketing, axé sur le côté 'sain' et 'naturel', s'attire les foudres de professionnels de la santé (qui pointent du doigt le taux de caféine et l'absence de Nutriscore) et des internautes, dénonçant un 'capitalisme d'influence' peu scrupuleux.",
+    intensity: 4,
+    status: 'recent',
+    sources: [
+      { label: 'Réseaux sociaux', url: 'https://twitter.com' }
+    ],
+    tags: ['Ciao Energy', 'Squeezie', 'Inoxtag', 'Léna Situations', 'bad buzz', 'plagiat'],
+    keyFacts: [
+      'Lancement le 1er juin 2026 par 3 des plus gros créateurs français',
+      'Accusations de plagiat de la marque canadienne GURU',
+      'Vives critiques des médecins sur le marketing "healthy" trompeur',
+      "Relance du débat sur l'éthique et le 'capitalisme d'influence'"
+    ],
+  },
+  {
     id: 'lena-situations-2026',
     title: 'Léna Situations & entourage — Polémique et bad buzz massif',
     shortTitle: 'Polémique Léna Situations',
