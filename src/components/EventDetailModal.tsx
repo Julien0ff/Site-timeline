@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 import { getCategoryById } from '../types/timeline';
 import type { TimelineEvent } from '../types/timeline';
@@ -9,6 +10,13 @@ interface EventDetailModalProps {
 }
 
 export default function EventDetailModal({ event, onClose }: EventDetailModalProps) {
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   const category = getCategoryById(event.category);
 
   return (

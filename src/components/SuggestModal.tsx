@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { CATEGORIES } from '../types/timeline';
 
@@ -37,6 +37,13 @@ export default function SuggestModal({ onClose }: SuggestModalProps) {
     }
   };
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content animate-scale-in" onClick={(e) => e.stopPropagation()}>
@@ -46,12 +53,39 @@ export default function SuggestModal({ onClose }: SuggestModalProps) {
 
         {status === 'success' ? (
           <div className="empty-state" style={{ padding: '60px 32px' }}>
-            <div className="empty-state-icon">✨</div>
+            <div className="empty-state-icon" style={{ fontSize: 0 }}>
+              <svg viewBox="0 0 24 24" width="72" height="72" shapeRendering="crispEdges" style={{ filter: 'drop-shadow(0px 8px 16px rgba(0,0,0,0.3))' }}>
+                {/* Big Sparkle */}
+                <g fill="#ffce00">
+                  <rect x="7" y="3" width="2" height="4" />
+                  <rect x="5" y="7" width="6" height="2" />
+                  <rect x="1" y="9" width="14" height="2" />
+                  <rect x="5" y="11" width="6" height="2" />
+                  <rect x="7" y="13" width="2" height="4" />
+                  <rect x="6" y="8" width="4" height="4" />
+                </g>
+                <rect x="7" y="9" width="2" height="2" fill="#fff" opacity="0.8" />
+                
+                {/* Small Sparkle */}
+                <g fill="#ff9906">
+                  <rect x="16" y="2" width="2" height="2" />
+                  <rect x="15" y="4" width="4" height="2" />
+                  <rect x="13" y="6" width="8" height="2" />
+                  <rect x="15" y="8" width="4" height="2" />
+                  <rect x="16" y="10" width="2" height="2" />
+                  <rect x="15" y="5" width="4" height="4" />
+                </g>
+                <rect x="16" y="6" width="2" height="2" fill="#fff" opacity="0.6" />
+                
+                {/* Tiny Particle */}
+                <rect x="18" y="14" width="2" height="2" fill="#ffce00" />
+              </svg>
+            </div>
             <h3 className="empty-state-title">Merci pour ta suggestion !</h3>
             <p className="empty-state-desc">
               L'événement a bien été envoyé. Il sera vérifié avant d'être ajouté à LA TIMELINE.
             </p>
-            <button className="btn btn-primary" onClick={onClose} style={{ marginTop: 24 }}>
+            <button className="btn btn-ghost" onClick={onClose} style={{ marginTop: 24 }}>
               Fermer
             </button>
           </div>

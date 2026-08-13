@@ -202,6 +202,15 @@ body {
   white-space: nowrap;
 }
 
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .btn-primary {
   background: var(--action-primary);
   color: white;
